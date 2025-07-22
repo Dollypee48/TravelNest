@@ -47,7 +47,12 @@ export default function ActivityItem({ activity, index, day }) {
                 autoFocus
               />
             ) : (
-              <p className="text-gray-800 text-sm">{activity.name}</p>
+              <div>
+                <p className="text-gray-800 text-sm font-medium">{activity.name}</p>
+                {activity.destination && (
+                  <p className="text-xs text-gray-500">Destination: {activity.destination}</p>
+                )}
+              </div>
             )}
           </div>
 
